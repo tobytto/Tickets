@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "43099662-7e21-49ea-84d3-e780bef535aa",
+		"name": "resources",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYzY1N2EyMDNjYTU0NzQ5MDgxNjBmZCIsImlhdCI6MTYyMzg1MTYwNSwiZXhwIjoxNjIzOTM4MDA1fQ.669uQ9-0bFYeJxmUv7onRKKnJGNmEfCO8xBIrgv1iX4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"laptop h32\",\r\n    \"price\": 10000,\r\n    \"category\": \"laptops\",\r\n    \"imgUrl\": \"https://ar-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/9/u/9uv90la_b.png\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYzBmZDdmZGFmYWUxNjJkNDMzY2I0ZiIsImlhdCI6MTYyMzYxMDExMiwiZXhwIjoxNjIzNjk2NTEyfQ.wMMVj8mXhycVWuQJzKhdX21Fil47PFnNObgwYhBLCc0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "x-access-token",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/product/:productId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYzBmZDdmZGFmYWUxNjJkNDMzY2I0ZiIsImlhdCI6MTYyMzYwOTQ0OSwiZXhwIjoxNjIzNjk1ODQ5fQ.4at7wi59O33rTz_29HuBbXX24fLFZIi2DQcVJcEBlSc",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/products/60bfec051225ec38dc27c252",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"products",
+						"60bfec051225ec38dc27c252"
+					],
+					"query": [
+						{
+							"key": "x-acces-token",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products/:productId",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwY2EwMmUyOTBmZDNhNGRkYzVlNjdiYSIsImlhdCI6MTYyMzg1MTc1OCwiZXhwIjoxNjIzOTM4MTU4fQ.J-N-5thPYARvrpcmgvzWMDd_gLJqKdvR-_WtZ9uwGrU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lenovo Thi\"\r\n    }\r\n\r\n    "
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/products/60bfec051225ec38dc27c252",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"products",
+						"60bfec051225ec38dc27c252"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/product/:productId",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwY2EwNGFkM2ViNWY0NzQyYzJiMzFlZCIsImlhdCI6MTYyMzg1MjIwNiwiZXhwIjoxNjIzOTM4NjA2fQ.c5tzf-WRiMNQh7ZLGumH6higEHznkzA8kH-thZ-y8b0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/products/60bfd837ee710720885ebf5e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"products",
+						"60bfd837ee710720885ebf5e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
