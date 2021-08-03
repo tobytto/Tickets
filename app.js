@@ -1,9 +1,9 @@
 import express from 'express'
 import morgan from 'morgan'
-import { createRoles } from './libs/initialSetup'
-import productRoutes from './routes/products.routes'
-import authRoutes from './routes/auth.routes'
-import userRoutes from './routes/user.routes'
+import { createRoles } from './src/libs/initialSetup'
+import productRoutes from './src/routes/products.routes'
+import authRoutes from './src/routes/auth.routes'
+import userRoutes from './src/routes/user.routes'
 const hbs = require('express-handlebars')
 
 const cors = require('cors');
@@ -49,7 +49,7 @@ app.get('/home', (req,res)=>{
 
 app.use(express.static('public'));
 
-import * as authCtrl from './controllers/auth.controller'
+import * as authCtrl from './src/controllers/auth.controller'
 app.post('/api/auth/signin',authCtrl.signIn);
 
 
