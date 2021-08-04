@@ -1,0 +1,66 @@
+body{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+.sector1{/* Rectangle 336 */
+
+    position: relative;
+    left: 0%;
+    right: 0%;
+    height: 42px;
+    background: #ED1604;
+    
+     
+    }
+  
+.titulo1{
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-top: 13px;
+    color: white;
+}
+
+.sector3{
+    background-color: black;
+    height: 141px;
+    position: relative;
+    
+}
+.ingresar{
+   position:relative;
+   padding-left: 75%;
+   top:50%;
+   transform: translateY(-50%);
+   overflow: hidden;
+   background-color: black;
+   
+
+}
+.buttonText{
+    text-transform: uppercase;
+    border: none;
+    font-size: 20px;
+    width: 200px;
+    background-color: red;
+    
+}
+
+.icon{
+    width: 15px;
+    height: 15px;
+}
+
+.ContenedorLogo{
+    padding-top: 1.4%;
+    padding-left: 10%;
+    top:50%;
+    transform: translateY(-50%);
+}
