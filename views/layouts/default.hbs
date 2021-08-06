@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>Taquilla</title>
 </head>
-<body>
+<body style="height:1000px;">
+<header>
+<div class="primercontainer">
     <div class="container sector1">
         <div class="sector2">
             <div class="titulo1">conocé sobre el protocolo vigente para espectáculos presenciales</div>
@@ -16,19 +19,93 @@
     </div>
     <div class="sector3">
             <div class="ingresar">
-                <button class="buttonText">
-                    <div class=""><img class="icon" src="img/usuario1.png" alt=""></div>
-                    <div class="">ingresar</div> 
+                <button type="button" class="buttonText" onclick="window.location='/login'">
+                <img class="icon" src="img/user2.png" alt="">
+                    <div>ingresar</div> 
                 </button>
             </div>
-            <div class="ContenedorLogo">
-            <div class="imgLogo">
-                <img src="img/taquillaNet.png" alt="No pudo cargar imagen">
-            </div>
+            <div class="ContenedorLogo imgLogo" href="home">
+            
+                <img src="img/taquillaNet.png"  onclick="window.location='/home'"   alt="No pudo cargar imagen">
+        
             </div>
         </div>
+        
     </div>
 
+    </header>
+
     {{{body}}}
+
+
+    <!--  FOOTER START -->
+  
+<div class="footer" id="bottom-footer">
+  <div class="inner-footer">
+
+<!--  for company name and description -->
+    <div class="footer-items">
+       <img src="img/taquillaNet.png"  alt="No pudo cargar imagen">
+      <p>Compra las entradas de tus eventos favoritos en nuestra plataforma!</p>
+    </div>
+
+<!--  for quick links  -->
+    <div class="footer-items">
+      <h3>Atajos</h3>
+      <div class="border1"></div> <!--for the underline -->
+        <ul>
+          <a href="/home"><li>Página principal</li></a>
+          {{!-- <a href="#"><li>Search</li></a> --}}
+          <a href="#"><li>Contacta con los desarrolladores</li></a>
+          <a href="#"><li>Sobre nosotros</li></a>
+          <a href="/profile"><li>Mi Perfil</li></a>
+          <a href="/payment"><li>Pago de prueba</li></a>
+        </ul>
+    </div>
+
+<!--  for some other links -->
+    <div class="footer-items">
+      <h3>Redes sociales</h3>
+      <div class="border1"></div>  <!--for the underline -->
+        <ul>
+          <a href="#"><li>Instragram</li></a>
+          <a href="#"><li>Facebook</li></a>
+          <a href="#"><li>Twitter</li></a>
+        </ul>
+    </div>
+
+<!--  for contact us info -->
+    <div class="footer-items">
+      <h3>Contactanos</h3>
+      <div class="border1"></div>
+        <ul>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Nombre, apellidos</li>
+          <li><i class="fa fa-phone" aria-hidden="true"></i>Numero de telefono 123456789</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i>asdasdadsdas@gmail.com</li>
+        </ul> 
+      
+<!--   for social links -->
+        <div class="social-media">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-google-plus-square"></i></a>
+        </div> 
+    </div>
+  </div>
+  
+<!--   Footer Bottom start  -->
+  <div class="footer-bottom">
+    <h3>Copyright &copy; taquillaNet 2020.</h3>
+  </div>
+</div>
+  
+<!--   Footer Bottom end -->
+  
+<!--   FOOTER END -->
+  
+
+   
 </body>
+
+
 </html>

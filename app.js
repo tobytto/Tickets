@@ -36,14 +36,20 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 
 
-app.get('/api/auth/signin',(req,res)=>{
-    res.render('signin')
+app.get('/login',(req,res)=>{
+    res.render('login')
 })
-app.get('/api/auth/signup', (req,res)=>{
+app.get('/signup', (req,res)=>{
     res.render('signup')
 })
 app.get('/home', (req,res)=>{
     res.render('home')
+})
+app.get('/profile', (req,res)=>{
+    res.render('profile')
+})
+app.get('/payment', (req,res)=>{
+    res.render('payment')
 })
 
 
