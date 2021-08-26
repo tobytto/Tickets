@@ -1,0 +1,30 @@
+<style>
+   .row{
+       padding-left: 100px;
+
+   }
+   h1{
+       padding-left: 100px;
+   }
+</style>
+
+
+<h1>All products</h1>
+{{!-- <pre> 
+    {{products}}
+</pre> --}}
+<div class="row">
+    {{#each products}}
+    
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Titulo del evento: {{name}}</h4>
+                    <h4>Precio del evento: {{price}}</h4>
+                    <h4>Precio del evento: {{category}}</h4>
+                </div>
+            </div>
+        </div>
+      
+    {{/each}}
+</div>

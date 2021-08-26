@@ -1,3 +1,4 @@
+import products from "../models/products";
 import Product from "../models/products"
 
 
@@ -15,14 +16,16 @@ export const createProducts = async (req,res) => {
 }
 
 export const getProducts = async (req,res) => {
-    const products = await Product.find()
-    res.json(products)
-   
+    const products = await Product.find({}).lean()
+    
+    console.log(products)
+
+    res.render('products',  { products});
 }
 
 export const getProductById = async (req,res) => {
    const product = await Product.findById(req.params.productId)
-   res.status(200).json(product)
+   res.status(200).json(products)
 }
 
 export const updateProductById = async (req,res) => {

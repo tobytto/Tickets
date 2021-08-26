@@ -8,11 +8,11 @@ import Rol from '../models/rol';
 export const verifyToken = async (req,res,next) =>{
         try {
 
-        //const token = req.headers["x-access-token"];
+        const token = req.headers["authorization"];
         //const token = req.headers.authorization
         if(!req.headers.authorization) return res.status(403).json({message: "no token provided"})
 
-        const token = req.headers.authorization.split(' ')[1]
+        // const token = req.headers.authorization.split(' ')[1]
         const decoded = jwt.verify(token,config.SECRET) //token decodificado
         req.userId = decoded.id;
 
