@@ -3,17 +3,23 @@ import products from "../models/products";
 import Product from "../models/products"
 
 
+
+export const getProductForm = async (req,res) => {
+    res.render('create', {pageTittle: 'Add product'})
+
+}
+
 export const createProducts = async (req,res) => {
-     
-  
+
+
  const { name, category, price, imgUrl} = req.body
  
   const newProduct  = new Product ({name,category,price,imgUrl});
  
   const productSaved = await newProduct.save() 
 
-
-  res.status(201).json(productSaved)
+   res.status(201).json(productSaved)
+  
 }
 
 export const getProducts = async (req,res) => {

@@ -5,7 +5,10 @@ import * as productsCtrl from '../controllers/products.controller'
 import {authJwt} from '../middlewares'
  
 
-router.post('/',[authJwt.verifyToken, authJwt.isModerator], productsCtrl.createProducts ) 
+
+router.get('/create', productsCtrl.getProductForm) 
+
+router.post('/create', productsCtrl.createProducts ) 
 
 router.get('/', productsCtrl.getProducts )
  
