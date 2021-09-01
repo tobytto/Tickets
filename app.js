@@ -10,14 +10,14 @@ const path = require('path');
 
 
 var corsOptions = {
-    origin: "http://localhost:4600/home", // Reemplazar con dominio
+    origin: "https://taquillanet.herokuapp.com/", // Reemplazar con dominio
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
 
 const app = express()
 createRoles();
-
+const imgRoutes = require('./src/routes/img.routes');
 //setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', hbs({
@@ -36,6 +36,7 @@ app.use(express.urlencoded({ extended: false }));
 
 //middlwares
 app.use('/products',productRoutes)
+app.use('/img', imgRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 
@@ -57,8 +58,7 @@ app.get('/payment', (req,res)=>{
     res.render('payment')
 })
 
-
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 
 import * as authCtrl from './src/controllers/auth.controller'

@@ -15,7 +15,24 @@ const userSchema = new Schema({
        type: String,
        required:true
     },
-    roles:[{
+    documento:{
+        type: String,
+        required:true,
+        unique: true
+     },
+     phonenumber:{
+        type: Number,
+        required:true
+     },
+     borndate:{
+        type: Date,
+        required:true
+     },
+     password:{
+        type: String,
+        required:true
+     },
+     roles:[{
         ref: "Rol",
         type: Schema.Types.ObjectId
     }]

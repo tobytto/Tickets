@@ -1,3 +1,4 @@
+import { render } from "express/lib/response";
 import products from "../models/products";
 import Product from "../models/products"
 
@@ -20,12 +21,28 @@ export const getProducts = async (req,res) => {
     
     console.log(products)
 
-    res.render('products',  { products});
+    res.render('products',  {products});
+    
 }
 
+// export const getProductByName = async(req,res) =>{
+//     const name = req.params.name
+//     const product = await Product.find(name)
+//     res.status(200).json(products)
+// }
+
 export const getProductById = async (req,res) => {
-   const product = await Product.findById(req.params.productId)
-   res.status(200).json(products)
+   const productId = await Product.findById(req.params.productId).lean()
+//    res.send('the product Id is ' + productId._id)
+ res.render('detail', {product: productId});
+
+
+
+//    res.status(200).json(product)
+//    .then(product => {
+//        console.log('product : ', product)
+//    })
+
 }
 
 export const updateProductById = async (req,res) => {

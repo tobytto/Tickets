@@ -4,9 +4,7 @@ html {
     position: relative;
     min-height: 100%;
 }
-body {
-    margin: 0 0 100px; /* bottom = footer height */
-}
+
 #bottom-footer {
     position: absolute;
     left: 0;
@@ -40,6 +38,7 @@ h1,h2,h3,a,p,li{
  }
 
 .footer-items {
+	text-align: left;
 	width: 25%;
 	padding: 10px 20px;
 	box-sizing: border-box;

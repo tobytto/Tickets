@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{!-- <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/footer.css">
+     <link rel="stylesheet" href="../css/items.css"> --}}
+    <title>Document</title>
+</head>
+<style>
+  body{
+      margin-bottom: 100px;
+  }
+  .left{
+    text-align: center;
+    width: 411px;
+  }
+  .wrapper{
+    text-align: center;
+  }
+  .centered-content{
+    display: inline-block;
+  }
+
+</style>
+<body>
+  <div class="wrapper">
+  <div class="centered-content"></div>
+    <H1> Detail Product</H1>
+    <img class="item-image image" style="width:411px; height:200px;" src="../img/{{product.imgUrl}}">
+
+      {{!-- <div class="item-details">
+            <h4 class="item-price">Precio: {{product.price}}$</h4> 
+                 
+            </div> --}}
+             <h4 class="item-price">Precio: {{product.price}}$</h4> 
+             <h4 class="item-price">Categoria: {{product.category}}</h4>
+            <button class="item-button btn btn-primary addToCart left">AÑADIR AL CARRITO</button> 
+
+            </div>
+            </div>
+</body>
+</html>

@@ -1,5 +1,6 @@
+import products from "../src/models/products";
 
-const serverUrl = 'http://localhost:4600/home';
+const serverUrl = 'http://localhost:5555/products';
 const itemsPath = 'items/';
 const imagesPath = 'img/';
 
@@ -27,12 +28,12 @@ function printData(data) {
 function createDomElement(item) {
   const itemHtml = `
     <div class="col-12 col-md-6">
-        <div class="item shadow mb-4" data-id=${item._id}>
+        <div class="item shadow mb-4" data-id=${products._id}>
             <h3 class="item-title">${products.name}</h3>
-            <img class="item-image" src=${serverUrl}${imagesPath}${item.image}>
+            <img class="item-image" src=${serverUrl}${imagesPath}${products.image}>
 
             <div class="item-details">
-                <h4 class="item-price">${item.price}€</h4>
+                <h4 class="item-price">${products.price}€</h4>
                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
             </div>
         </div>
