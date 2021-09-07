@@ -12,12 +12,13 @@ background-color: #F4F4F4;
 
 .containerSignup{
     padding-left: 25%;
+    padding-top: 100px;
 }
 
 .cuadro{
 
 
-height: 481px;
+height: 700px;
 width: 1170px;
 left: 0px;
 top: 0px;
@@ -92,7 +93,7 @@ color: #373737;
     
     .padding{
         padding-left: 25px;
-        padding-top: 22px;
+      
         padding-right: 26px;
     }
     

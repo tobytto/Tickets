@@ -7,36 +7,96 @@
     <title>Document</title>
 </head>
 <style>
-
-    <style>
-   .row{
-       padding-left: 100px;
-
-   }
+   
  
- 
-  .centered-content{
-    display: inline-block;
-  }
+  
    .wrapper{
     text-align: center;
   }
+  .column{
+     column-count: 3;
+     column-gap: 10px;
+     
 
+  }
+  .show{
+    text-align: center;
+  }
+  .item{
+    width: 100%;
+  }
 </style>
 
 <body>
 
-    
-    
+ <div class="containers">
+<div class="pic-ctn">
+    <img src="../img/soda.png" alt="" class="pic">
+    <img src="../img/beriso.jpg" alt="" class="pic">
+    <img src="../img/banda.png" alt="" class="pic">
 
-<div class="row wrapper centered-content">
-<h1>All Products</h1>
+  </div></div>
+  <div class="container2">
+  <div class="pic-ctn2">
+    <img src="../img/beriso.jpg" alt="" class="pic">
+    <img src="../img/banda.png" alt="" class="pic">
+    <img src="../img/soda.png" alt="" class="pic">
+
+  </div></div>
+  
+  <div class="contenedorLogin">      
+    <div class="textotitulo"><b>Buscar un evento</b></div>
+    <div class="cuadro">
+  
+        <div class="padding"><input type="text" class="campo" placeholder="Escribí una fecha, nombre, artista o evento..."></div>   
+        
+        <div class="padding2"><button class="boton ingreso">Buscar</button></div><br>
+        
+        <table>
+        <tr>
+        <td><div class="text">Fecha</div>
+        <div class="padding2"><select type="text" class="campo2" >
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        </select></div></td>
+        
+        <td>
+        <div class="text">Horario</div>
+        <div class="padding2"><select type="text" class="campo2" >
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        </select></div></td>
+        
+        <td>
+        <div class="text">Categorías</div>
+        <div class="padding2"><select type="text" class="campo2" >
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        </select></div></td>
+        
+        
+ 
+        </tr>
+        </table>
+        </div>
+    </div>
+
+
+<h1 class="show">Shows presenciales</h1>
+<div class="row wrapper centered-content column" style="margin-left: 25%; margin-right:25%;" >
 {{#each products}}
-
- <div class="col-12 col-md-6">
-        <div class="item shadow mb-4" data-id={{_id}} category={{category}} >
+        <div class="item shadow" data-id={{_id}} category={{category}} >
             {{!-- <h3 class="item-title">Titulo: {{name}}</h3> --}}
-            <img class="item-image image" onclick="window.location='/products/{{_id}}'" style="width:411px; height:200px;" src="../img/{{imgUrl}}">
+            <img class="item-image image" onclick="window.location='/products/{{_id}}'" style="width:100%; height:200px;" src="../img/{{imgUrl}}">
            
             {{!-- <div class="item-details">
                 {{!-- <h4 class="item-price">Precio: {{price}}$</h4> --}}
@@ -45,7 +105,8 @@
         </div>
         {{/each}}
 </div>
-</div>
+
+
 
 
 </body>

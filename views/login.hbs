@@ -6,20 +6,22 @@
 
 </head>
 <body>
-    
-    <div class="textotitulo"> <b>Iniciá sesión</b> con tu cuenta:</div><br>
     <div class="contenedorLogin">
+    <div class="textotitulo"> <b>Iniciá sesión</b> con tu cuenta:</div><br>
+    
+    <form action="/login" method="POST">
     <div class="cuadro">
         <div class="text">Email: </div>
-        <div class="padding"><input type="text" class="campo" placeholder="Ingresá tu email"></div>
+        <div class="padding"><input type="text" class="campo" id="mail" name="mail" placeholder="Ingresá tu email"></div>
         
         <div class="text2">Contraseña: </div>
-        <div class="padding"><input type="password" class="campo" placeholder="*************"></div>
+        <div class="padding"><input type="password" class="campo" id="password" name="password" placeholder="*************"></div>
         
         
-        <div class="padding"><button class="boton ingreso">Ingresar</button></div><br>
-        <div class="text3">¿No tenés una cuenta? <a href="http://localhost:4600/signup" class="regis" >Registrate</a></div>
+        <div class="padding"><button type="submit" class="boton ingreso">Ingresar</button></div><br>
+        <div class="text3">¿No tenés una cuenta? <a onclick="window.location='/signup'" class="regis" >Registrate</a></div>
         </div>
+        </form>
     </div>
 </body>
 </html>

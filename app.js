@@ -7,6 +7,15 @@ import userRoutes from './src/routes/user.routes'
 const hbs = require('express-handlebars');
 const cors = require('cors');
 const path = require('path');
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+    destination: path.join(__dirname, '/public/img'),
+    filename: (req,file,cb) =>{
+        cb(null,file.originalname);
+    }
+})
+const upload = multer({ storage: storage, limits: { fieldSize: 10 * 1024 * 1024 } });
 
 
 var corsOptions = {
@@ -30,15 +39,30 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors(corsOptions));
+app.use(multer({
+    storage,
+    upload,
+    dest: path.join(__dirname, '/public/img/')
+
+}).single('imgUrl'));
 
 
 app.use(express.urlencoded({ extended: false }));
 
+const signupRoutes = require('./src/routes/signup');
+const loginRoutes = require('./src/routes/login');
+
 //middlwares
-app.use('/products',productRoutes)
+
+
+app.use('/home',productRoutes);
 app.use('/img', imgRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/signup', signupRoutes);
+app.use('/login', loginRoutes);
+
+
 
 
 //renders
@@ -48,9 +72,9 @@ app.get('/login',(req,res)=>{
 app.get('/signup', (req,res)=>{
     res.render('signup')
 })
-app.get('/products', (req,res)=>{
-    res.render('products')
-})
+// app.get('/products', (req,res)=>{
+//     res.render('products')
+// })
 app.get('/profile', (req,res)=>{
     res.render('profile')
 })

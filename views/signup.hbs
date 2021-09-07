@@ -8,43 +8,96 @@
      <div class="textotitulo"> <b>Registrate</b> ingresando los siguientes datos:</div><br>
             <div class="containerSignup">
     <div class="cuadro">
+        
+        <form action="/signup" method="POST" onsubmit="verificarPasswords(); return false">
         <table>
         <tr>
         <td><div class="text">Usuario: </div>
-        <div class="padding"><input type="text" class="campo" placeholder="Ingresá tu nombre de usuario"></div>
+        <div class="padding"><input type="text" class="campo" id="username" name="username" placeholder="Ingresá tu nombre de usuario" required></div>
         
         
         <div class="text2">Fecha de nacimiento: </div>
-        <div class="padding"><input type="date" class="campo"></div>
+        <div class="padding"><input type="date" id="dateb" name="dateb" class="campo" required></div>
         
-        
+         <div class="text2">Teléfono: </div>
+        <div class="padding"><input type="text" id="number" name="number" class="campo" placeholder="Ingresá tu número de telefono" required></div>
         <div class="text">Localidad: </div>
-        <div class="padding"><input type="text" class="campo" ></div>
+        <div class="padding"><input type="text" id="localidad" name="localidad" class="campo"></div>
         
+        <div class="text2">Contraseña: </div>
+        <div class="padding"><input type="password" class="campo" id="password2" name="password2" placeholder="**************" required></div>
         
-        <div class="text2">Teléfono: </div>
-        <div class="padding"><input type="text" class="campo" placeholder="Ingresá tu número de telefono"></div></td>
-        
+       </td>
 
         <td>
         <div class="text">Documento: </div>
-        <div class="padding"><input type="text" class="campo" placeholder="Ingresá tu número de documento"></div>
+        <div class="padding"><input type="text" class="campo" id="documento" name="documento" placeholder="Ingresá tu número de documento" required></div>
         
         <div class="text2">País de residencia: </div>
-        <div class="padding"><input type="text" class="campo" ></div>
+        <div class="padding"><select id="pais" name="pais" class="campo">
+        <option>Argentina</option>
+        <option>Bolivia</option> 
+        <option>Chile</option>
+        <option>Colombia</option>
+        <option>Costa Rica</option>
+        <option>Cuba</option>
+        <option>Ecuador</option>
+        <option>El Salvador</option>
+        <option>España</option>
+        <option>Guatemala</option>
+        <option>Honduras</option>
+        <option>México</option>
+        <option>Nicaragua</option>
+        <option>Panamá</option>
+        <option>Perú</option>
+        <option>Puerto Rico</option>
+        <option>República Dominicana</option>
+        <option>Uruguay</option>
+        <option>Venezuela</option>
+        </select>
+        </div>
+
+
         <div class="text">Email: </div>
-        <div class="padding"><input type="email" class="campo" placeholder="Ingresá tu email"></div>
+        <div class="padding"><input type="email" class="campo" id="mail" name="mail" placeholder="Ingresá tu email"></div>
         
         <div class="text2">Contraseña: </div>
-        <div class="padding"><input type="password" class="campo" placeholder="**************"></div></td>
+        <div class="padding"><input type="password" class="campo" id="password" name="password" placeholder="**************" required></div>
+        </td>
         </tr>
         </table>
     </div>
     </div> 
 
     <div class="padding2"><button class="boton ingreso">Registrarme</button></div><br>
+</form>
 
+<!-- Funcion verificar -->
+<script type="text/javascript"> 
 
+    function verificarPasswords() {
+
+        // Contraseñas a verificar
+        password = document.getElementById('password');
+        password2 = document.getElementById('password2');
+
+        // Verificar si las constraseñas coinciden
+        if (password.value != password2.value){
+
+        // Si las constraseñas no son iguales muestra un mensaje
+            document.getElementById("error").classList.add("mostrar");
+
+            return false;
+
+        }else{
+
+            next();
+
+        }
+    }
+</script>
+
+<!-- Fin Funcion -->
         
         
 </body>

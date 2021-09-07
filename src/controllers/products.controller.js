@@ -27,7 +27,7 @@ export const getProducts = async (req,res) => {
     
     console.log(products)
 
-    res.render('products',  {products});
+    res.render('home',  {products});
     
 }
 
