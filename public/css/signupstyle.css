@@ -3,8 +3,7 @@ body{
 
 
 
-left: 0px;
-top: 13px;
+
 
 background-color: #F4F4F4;
 
@@ -74,7 +73,7 @@ color: #373737;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0em;
-    text-align: left;
+  
     
     
     
@@ -100,7 +99,7 @@ color: #373737;
     
     .campo{
     height: 48px;
-    width: 515px;
+    width: 100%;
     left: 0px;
     top: 45px;
     border-radius: 1px;
@@ -143,7 +142,7 @@ color: #373737;
         font-weight: 700;
         line-height: 24px;
         letter-spacing: 0em;
-        text-align: left;
+      
 
         /* Black */
         
@@ -162,7 +161,7 @@ color: #373737;
         height: 23px;
         border-radius: nullpx;
         padding-top: 19.05px;
-        padding-left: 22px;
+        
         
         
         font-family: Poppins;
@@ -171,7 +170,7 @@ color: #373737;
         font-weight: 700;
         line-height: 24px;
         letter-spacing: 0em;
-        text-align: left;
+    
         
         
         
@@ -222,3 +221,109 @@ color: #373737;
     padding-left: 64.1%;
     padding-top: 22px;
 }
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+
+
+@media (max-width: 480px) {
+    
+    body{
+        width: 100%;
+    }
+    
+    .textotitulo{
+     padding-left: 10%;
+     font-size: 18px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    }
+
+    .containerSignup{
+        padding-left: 0%;
+        padding-top: 0%;
+    }
+
+    .cuadro{
+        height: 1200px;
+    }
+    .padding2{
+        padding-left: 7%;
+        padding-right: 0%;
+    }
+    .button{
+        text-align: center;
+    }
+
+
+} 
