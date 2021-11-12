@@ -3,9 +3,6 @@ import jwt from 'jsonwebtoken'
 import config from '../config'
 import Rol from '../models/rol';
 
-
-
-
 export const signUp = async(req,res) => {
     const {username,email,password, roles} = req.body;
 
@@ -38,6 +35,8 @@ export const signUp = async(req,res) => {
         message: 'Usuario creado correctamente',
         token: {token} 
     })
+    
+   
 }
 
 
@@ -57,5 +56,7 @@ export const signIn = async (req,res) => {
         expiresIn: 86400
     })
  
-    res.json({token})       
+    res.json({token})      
+    
+
 }

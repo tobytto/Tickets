@@ -9,6 +9,7 @@ const cors = require('cors');
 const path = require('path');
 const multer = require('multer');
 
+
 const storage = multer.diskStorage({
     destination: path.join(__dirname, '/public/img'),
     filename: (req,file,cb) =>{
@@ -19,7 +20,7 @@ const upload = multer({ storage: storage, limits: { fieldSize: 10 * 1024 * 1024 
 
 
 var corsOptions = {
-    origin: "https://taquillanet.herokuapp.com/", // Reemplazar con dominio
+    origin: "http://localhost:5555/", // Reemplazar con dominio
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
@@ -48,6 +49,7 @@ app.use(multer({
 
 
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 const signupRoutes = require('./src/routes/signup');
 const loginRoutes = require('./src/routes/login');
@@ -83,6 +85,7 @@ app.get('/payment', (req,res)=>{
 })
 
 app.use(express.static(path.join(__dirname, '/public')));
+
 
 
 import * as authCtrl from './src/controllers/auth.controller'

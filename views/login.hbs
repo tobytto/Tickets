@@ -6,11 +6,12 @@
 
 </head>
 <body>
-    <div class="contenedorLogin">
+   
     <div class="textotitulo"> <b>Iniciá sesión</b> con tu cuenta:</div><br>
     
-    <form action="/login" method="POST">
-    <div class="cuadro">
+    <div class="separador1"></div>
+    <div class="cuadro"> 
+        <form  action="/login" method="POST">
         <div class="text">Email: </div>
         <div class="padding"><input type="text" class="campo" id="mail" name="mail" placeholder="Ingresá tu email"></div>
         
@@ -19,9 +20,11 @@
         
         
         <div class="padding"><button type="submit" class="boton ingreso">Ingresar</button></div><br>
-        <div class="text3">¿No tenés una cuenta? <a onclick="window.location='/signup'" class="regis" >Registrate</a></div>
-        </div>
-        </form>
+        <div class="text3">¿No tenés una cuenta? <a href="signup" class="regis" >Registrate</a></div></form>
     </div>
+    <div class="separador2"></div>
+        
+  
 </body>
 </html>
+

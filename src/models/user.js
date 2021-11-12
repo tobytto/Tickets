@@ -1,4 +1,4 @@
-// import {Schema,model} from 'mongoose'
+import {Schema,model} from 'mongoose'
 // import bcrypt from 'bcryptjs'
 
 
@@ -63,13 +63,23 @@ const saltRounds = 10;
 const UserSchema = new mongoose.Schema({
     username:   { type: String, required: true, unique: true },
     mail:       { type: String, required: true, unique: true },
-    number:     { type: String, required: false },
+    number:     { type: Number, required: false },
     documento:  { type: String, required: true, unique: true },
     password:   { type: String, required: true  },
     localidad:  { type: String, required: false },
     pais:       { type: String, required: true  },
-    dateb:      { type: String, required: true  },
-});
+    dateb:      { type: Date, required: true  },
+    roles:[{
+            ref: "User",
+            type: Schema.Types.ObjectId
+           }]
+},
+{
+        timestamps: true,
+        versionKey: false
+ },
+{ versionKey: 'false' }
+);
 
 UserSchema.pre('save', function(next){
     if(this.isNew || this.isModified('password')){

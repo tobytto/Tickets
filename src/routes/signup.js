@@ -16,14 +16,15 @@ router.get('/', function(req, res) {
 router.post('/', async(req, res) =>{
     const {username, password, mail, number, documento, dateb, pais, localidad} = req.body;
 
-    const user = new User({username, documento, localidad, dateb, pais, password, mail, number});
-
+    const newUser = new User({username, documento, localidad, dateb, pais, password, mail, number});
+   
 
     try{
-        const newUser = await user.save();
+        const savedUser = await newUser.save();
+          console.log(newUser);
           return res.json({ message: "Correctamente registrado"});
     }catch(err){
-          return res.status(400).json({ error: 'Error al registrarse'});        
+          return res.status(400).json({ error: 'Error al registrarse'});       
       }  
 
 });

@@ -6,14 +6,18 @@
 </head>
 <body>
      <div class="textotitulo"> <b>Registrate</b> ingresando los siguientes datos:</div><br>
-            <div class="containerSignup">
+    <div class="containerSignup">
     <div class="cuadro">
         
         <form action="/signup" method="POST" onsubmit="verificarPasswords(); return false">
         <table>
+            <tbody>
         <tr>
-        <td><div class="text">Usuario: </div>
-        <div class="padding"><input type="text" class="campo" id="username" name="username" placeholder="Ingresá tu nombre de usuario" required></div>
+        <td>
+            
+        <div class="text">Usuario: </div>
+        <div class="padding"><input type="text" class="campo" id="username" name="username" placeholder="Ingresá tu nombre de usuario" required>
+        </div>
         
         
         <div class="text2">Fecha de nacimiento: </div>
@@ -63,14 +67,21 @@
         
         <div class="text2">Contraseña: </div>
         <div class="padding"><input type="password" class="campo" id="password" name="password" placeholder="**************" required></div>
+        
         </td>
+
         </tr>
+        
+        </tbody>
         </table>
+        <div class="padding2">
+            <button class="boton ingreso">Registrarme</button>
+        </div>
+        </form>
     </div>
     </div> 
 
-    <div class="padding2"><button class="boton ingreso">Registrarme</button></div><br>
-</form>
+  
 
 <!-- Funcion verificar -->
 <script type="text/javascript"> 
